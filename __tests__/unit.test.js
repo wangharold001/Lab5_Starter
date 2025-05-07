@@ -52,16 +52,16 @@ test('valid, too long', () => {
 });
 
 //date
-test('valid date, 1 digit month & day', () => {
+test('valid, 1 digit month & day', () => {
   expect(isDate('3/14/2020')).toBe(true);
 });
-test('valid date, 2 digit month & day', () => {
+test('valid, 2 digit month & day', () => {
   expect(isDate('12/31/2000')).toBe(true);
 });
-test('invalid date, two‑digit year', () => {
+test('invalid, two‑digit year', () => {
   expect(isDate('3/14/20')).toBe(false);
 });
-test('invalid date, wrong separator', () => {
+test('invalid, wrong separator', () => {
   expect(isDate('3-14-2023')).toBe(false);
 });
 
